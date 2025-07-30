@@ -1,0 +1,12 @@
+fastapi 
+uvicorn 
+langchain_groq 
+faiss-cpu 
+langchain-openai 
+ollama 
+pydantic 
+langchain-community
+langchain-openai
+python-dotenv
+langchain_tavily
+BeautifulSoup4
