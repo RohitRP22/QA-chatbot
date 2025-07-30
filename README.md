@@ -4,7 +4,7 @@ A FastAPI-powered question-answering chatbot using web search and retrieval-augm
 
 ## Features
 
-- Accepts user questions via REST API
+- FastAPI-powered question-answering
 - Searches the web for relevant context using Tavily
 - Loads and splits web documents for context
 - Embeds documents with OpenAI embeddings

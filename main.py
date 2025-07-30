@@ -82,10 +82,25 @@ def get_response(request: ChatRequest):
         )
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+    
+# @app.get("/documents", response_model=List[str])
+# def get_documents():
+#     """
+#     Endpoint to get loaded document chunks (for debugging or exploration).
+#     """
+#     return [doc.page_content for doc in final_documents[:10]]
 
-def main():
-    print("Hello from qa-chatbot!")
-
-
-if __name__ == "__main__":
-    main()
+# @app.post("/reload_documents")
+# def reload_documents():
+#     """
+#     Endpoint to reload the documents and embeddings.
+#     """
+# #     global docs, final_documents, vectors, retriever
+#         try:
+#             docs = loader.load()
+#             final_documents = text_splitter.split_documents(docs)
+#             vectors = FAISS.from_documents(final_documents, embeddings)
+#             retriever = vectors.as_retriever()
+#             return {"status": "Documents reloaded successfully"}
+#         except Exception as e:
+#             raise HTTPException(status_code=500, detail=str(e))
